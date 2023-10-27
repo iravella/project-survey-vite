@@ -16,6 +16,7 @@ export const App = () => {
 
   //reference to the state of the step
   const [currentStep, setCurrentStep] = useState(0);
+
   //function to update the step
   const nextStep = () => {
     console.log(currentStep, "before if");
@@ -24,32 +25,45 @@ export const App = () => {
   };
 
   // function to update the form data
+  // const updateForm = (form) => {
+  //   setFormData(form);
+  // };
 
   //submit form function
+  //set currentStep to 5 to separate from questions
   const submit = () => {
-    console.log(formData);
     setCurrentStep(5);
+    // updateForm(formData);
   };
 
   return (
     <div className="container">
       <h2>This is the survey!</h2>
       <div className="question-container">
-        <div>Question</div>
+        {currentStep !== 5 && (
+          <div className="topic">
+            Please answer these questions about Javascript and React
+          </div>
+        )}
         {currentStep === 1 && <QuestionOne />}
         {currentStep === 2 && <QuestionTwo />}
         {currentStep === 3 && <QuestionThree />}
         {currentStep === 4 && <QuestionFour />}
         {currentStep === 5 && <Summary formData={formData} />}
         <div className="footer">
-          {currentStep < 4 && (
-            <button className="next-button" onClick={nextStep}>
+          {currentStep < 4 && currentStep > 0 && (
+            <button className="button next" onClick={nextStep}>
               Next
             </button>
           )}
           {currentStep === 4 && (
-            <button className="submit-button" onClick={submit}>
+            <button className="button submit" onClick={submit}>
               Submit
+            </button>
+          )}
+          {currentStep === 0 && (
+            <button className="button start" onClick={nextStep}>
+              Start!
             </button>
           )}
         </div>
@@ -57,6 +71,5 @@ export const App = () => {
     </div>
   );
 };
-
 //one component per question and one for summary. Components should keep the heading and the buttons/select/checkboxes
-//Summary has own design
+//Summary has own design?
