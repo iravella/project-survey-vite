@@ -72,6 +72,9 @@ export const App = () => {
                 Start!
               </button>
             )}
+            {currentStep < 5 && currentStep > 0 && (
+              <div className="question-counter"> {currentStep}/4 </div>
+            )}
           </div>
         </div>
       </div>

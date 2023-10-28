@@ -63,3 +63,8 @@ code {
   margin: 1rem;
   font-style: italic;
 }
+
+.question-counter {
+  margin-top: 1rem;
+  color: darkgrey;
+}
