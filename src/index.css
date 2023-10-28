@@ -68,3 +68,7 @@ code {
   margin-top: 1rem;
   color: darkgrey;
 }
+
+.label {
+  margin: 1rem;
+}
