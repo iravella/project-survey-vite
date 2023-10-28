@@ -1,5 +1,5 @@
 import React from "react";
-import "./QuestionOne.css";
+//import "./QuestionOne.css";
 
 export const QuestionOne = ({ updateForm, value }) => {
   const whatIsInput = (event) => updateForm("whatIs", event.target.value);
