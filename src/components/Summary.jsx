@@ -7,6 +7,7 @@ export const Summary = ({ formData }) => {
       <p>{formData.variable} variable</p>
       <p>{formData.datatypes} datatypes</p>
       <p>{formData.companiesReact} companiesReact</p>
+      <p>{formData.howFun} howFun</p>
     </div>
   );
 };
