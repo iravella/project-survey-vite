@@ -1,0 +1,12 @@
+.range-container {
+  text-align: center;
+}
+.range {
+  opacity: 0.7;
+  width: 70%;
+  color: rgba(135, 163, 107, 0.781);
+}
+.range:hover {
+  opacity: 1;
+  cursor: pointer;
+}

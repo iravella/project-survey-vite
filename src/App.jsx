@@ -4,6 +4,7 @@ import { QuestionTwo } from "./components/QuestionTwo";
 import { QuestionThree } from "./components/QuestionThree";
 import { QuestionFour } from "./components/QuestionFour";
 import { Summary } from "./components/Summary";
+import { QuestionFive } from "./components/QuestionFive";
 
 export const App = () => {
   //reference to the state of the form
@@ -12,6 +13,7 @@ export const App = () => {
     variable: "",
     datatypes: "",
     companiesReact: "",
+    howFun: 0,
   });
 
   //reference to the state of the step
@@ -20,9 +22,7 @@ export const App = () => {
   //function to update the step
   const nextStep = (event) => {
     event.preventDefault();
-    console.log(currentStep, "before if");
-    if (currentStep < 4) setCurrentStep(currentStep + 1);
-    console.log(currentStep, "after if");
+    if (currentStep < 5) setCurrentStep(currentStep + 1);
   };
 
   // function to update the form data
@@ -34,7 +34,7 @@ export const App = () => {
   //set currentStep to 5 to separate from questions
   const submit = (event) => {
     event.preventDefault();
-    setCurrentStep(5);
+    setCurrentStep(6);
     console.log(formData);
     // updateForm(formData);
   };
@@ -44,7 +44,7 @@ export const App = () => {
       <div className="container">
         <h2>This is the survey!</h2>
         <div className="question-container">
-          {currentStep !== 5 && (
+          {currentStep !== 6 && (
             <div className="topic">
               Please answer these questions about Javascript and React
             </div>
@@ -57,14 +57,17 @@ export const App = () => {
           )}
           {currentStep === 3 && <QuestionThree />}
           {currentStep === 4 && <QuestionFour />}
-          {currentStep === 5 && <Summary formData={formData} />}
+          {currentStep === 5 && (
+            <QuestionFive value={formData.howFun} updateForm={updateForm} />
+          )}
+          {currentStep === 6 && <Summary formData={formData} />}
           <div className="footer">
-            {currentStep < 4 && currentStep > 0 && (
+            {currentStep < 5 && currentStep > 0 && (
               <button className="button next" onClick={nextStep}>
                 Next
               </button>
             )}
-            {currentStep === 4 && (
+            {currentStep === 5 && (
               <button className="button submit" onClick={submit}>
                 Submit
               </button>
@@ -74,8 +77,8 @@ export const App = () => {
                 Start!
               </button>
             )}
-            {currentStep < 5 && currentStep > 0 && (
-              <div className="question-counter"> {currentStep}/4 </div>
+            {currentStep < 6 && currentStep > 0 && (
+              <div className="question-counter"> {currentStep}/5 </div>
             )}
           </div>
         </div>

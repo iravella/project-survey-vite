@@ -16,6 +16,7 @@ export const QuestionTwo = ({ updateForm, value }) => {
             value={valueConstLet}
             onChange={variableInput}
             checked={value === valueConstLet}
+            name="variable"
           ></input>
           Using the ‘const’ or ‘let’ keywords
         </label>
@@ -27,6 +28,7 @@ export const QuestionTwo = ({ updateForm, value }) => {
             value={valueShout}
             onChange={variableInput}
             checked={value === valueShout}
+            name="variable"
           ></input>
           By shouting its name
         </label>

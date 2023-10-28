@@ -14,6 +14,7 @@ export const QuestionOne = ({ updateForm, value }) => {
           <input
             type="radio"
             value={valueCoffee}
+            name="whatIs"
             onChange={whatIsInput}
             checked={value === valueCoffee}
           ></input>
@@ -25,6 +26,7 @@ export const QuestionOne = ({ updateForm, value }) => {
           <input
             type="radio"
             value={valueLang}
+            name="whatIs"
             onChange={whatIsInput}
             checked={value === valueLang}
           ></input>
