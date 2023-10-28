@@ -3,10 +3,10 @@ import React from "react";
 export const Summary = ({ formData }) => {
   return (
     <div>
-      <p>{formData.whatIs}</p>
-      <p>{formData.variable}</p>
-      <p>{formData.datatypes}</p>
-      <p>{formData.companiesReact}</p>
+      <p>{formData.whatIs} whatIs</p>
+      <p>{formData.variable} variable</p>
+      <p>{formData.datatypes} datatypes</p>
+      <p>{formData.companiesReact} companiesReact</p>
     </div>
   );
 };
