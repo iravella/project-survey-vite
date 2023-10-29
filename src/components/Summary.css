@@ -1,0 +1,12 @@
+.react-companies:not(:first-of-type)::before {
+  content: ",";
+}
+
+.react-companies:last-child::before {
+  content: " &";
+  white-space: pre;
+}
+
+.react-companies:first-of-type::before {
+  content: "";
+}

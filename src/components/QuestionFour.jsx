@@ -2,12 +2,7 @@ import React, { useState, useEffect } from "react";
 
 export const QuestionFour = ({ updateForm, value }) => {
   const [selectedOptions, setSelectedOptions] = useState(value); // Initialize selectedOptions with the provided value
-  const options = [
-    " Facebook",
-    " Airbnb",
-    " Netflix",
-    " Google",
-  ];
+  const options = [" Facebook", " Airbnb", " Netflix", " Google"];
 
   // Update the selected options when the value prop changes
   useEffect(() => {
@@ -31,7 +26,7 @@ export const QuestionFour = ({ updateForm, value }) => {
 
   return (
     <div>
-      <div className="question">4. Some big companies using React</div>
+      <div className="question">Some big companies using React</div>
       <div className="label">
         {options.map((option) => (
           <label key={option}>
