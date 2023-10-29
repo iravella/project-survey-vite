@@ -55,8 +55,12 @@ export const App = () => {
           {currentStep === 2 && (
             <QuestionTwo value={formData.variable} updateForm={updateForm} />
           )}
-          {currentStep === 3 && <QuestionThree />}
-          {currentStep === 4 && <QuestionFour />}
+          {currentStep === 3 && (
+            <QuestionThree value={formData.datatypes} updateForm={updateForm} />
+          )}
+          {currentStep === 4 && (
+            <QuestionFour value={formData.companiesReact} updateForm={updateForm} />
+          )}
           {currentStep === 5 && (
             <QuestionFive value={formData.howFun} updateForm={updateForm} />
           )}

@@ -1,16 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./QuestionThree.css";
 
-export const QuestionThree = () => {
-  const [selectedOption, setSelectedOption] = useState("");
+// eslint-disable-next-line react/prop-types
+export const QuestionThree = ({ updateForm, value }) => {
+  const [selectedOption, setSelectedOption] = useState(value); // Initialize selectedOption with the provided value
   const options = [
-    "a) Number, String, Array, Object, Boolean ",
-    "b) Red, Green, Blue ",
+    "a) Number, String, Array, Object, Boolean",
+    "b) Red, Green, Blue",
     "c) Cat, Dog, Fish",
   ];
 
+  // Update the selected option when the value prop changes
+  useEffect(() => {
+    setSelectedOption(value);
+  }, [value]);
+
   const handleDropdownChange = (event) => {
-    setSelectedOption(event.target.value);
+    const selectedValue = event.target.value;
+    setSelectedOption(selectedValue);
+    updateForm("datatypes", selectedValue);
   };
 
   return (
