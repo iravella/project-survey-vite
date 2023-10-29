@@ -17,13 +17,7 @@
   option {
     font-size: 16px;
   }
-  
-  /* Media query for smaller screens (adjust as needed) */
-  @media screen and (max-width: 600px) {
-    /* Adjust the font size, padding, and container width for smaller screens */
-    .label {
-      margin: 5px;
-    }
+
   
     select {
       font-size: 14px;
