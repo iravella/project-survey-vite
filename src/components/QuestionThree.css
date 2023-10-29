@@ -1,0 +1,33 @@
+/* Style for the container of the dropdown */
+.label {
+    margin: 10px;
+  }
+  
+  /* Style for the dropdown select element */
+  select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  /* Style for the option items in the dropdown */
+  option {
+    font-size: 16px;
+  }
+  
+  /* Media query for smaller screens (adjust as needed) */
+  @media screen and (max-width: 600px) {
+    /* Adjust the font size, padding, and container width for smaller screens */
+    .label {
+      margin: 5px;
+    }
+  
+    select {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./QuestionThree.css";
 
 export const QuestionThree = () => {
   const [selectedOption, setSelectedOption] = useState("");
