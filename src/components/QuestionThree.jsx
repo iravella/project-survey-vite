@@ -4,9 +4,9 @@ import "./QuestionThree.css";
 export const QuestionThree = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const options = [
-    "a) Number, String, Array, Object, Boolean",
-    "b) Red, Green, Blue",
-    "c) Cat, Dog, Fish",
+    " String, Array ",
+    " Red, Green ",
+    " Cat, Dog ",
   ];
 
   const handleDropdownChange = (event) => {
