@@ -6,8 +6,11 @@ export const QuestionFive = ({ updateForm, value }) => {
 
   return (
     <div>
-      <div className="question">How fun is learning Javascript and React?</div>
+      <div className="question">
+        On a scale of 1-10, how fun is learning Javascript and React?
+      </div>
       <div className="range-container">
+        <span>1</span>
         <input
           className="range"
           type="range"
@@ -16,6 +19,7 @@ export const QuestionFive = ({ updateForm, value }) => {
           onChange={howFun}
           value={value}
         ></input>
+        <span>10</span>
       </div>
     </div>
   );
